@@ -3,6 +3,7 @@ export default class DistrictRepository {
   constructor(data) {
 
     this.data = this.dataHelper(data)
+    console.log(this.data)
     // in the array will be key value pairs 
     // the key is the school's name
     // the value is an object of all the school's 
@@ -12,8 +13,13 @@ export default class DistrictRepository {
 
   dataHelper(data) {
     return data.reduce((acc, dp) => {
-      if (!acc[dp.Location]) acc[dp.Location] = {}
-      acc[dp.Location] = { ...acc[dp.Location], [dp.TimeFrame]: [dp.data] }
+      let { Data, Location, TimeFrame } = dp
+      const schoolData = !isNaN(Data) ?parseFloat(Data).toFixed(3) : 0
+
+      if (!acc[Location]) acc[Location] = {}
+
+      acc[Location] = { ...acc[Location], 
+        [TimeFrame]: schoolData }
 
       return acc;
     }, {})
