@@ -4,22 +4,18 @@ export default class DistrictRepository {
     this.data = this.dataHelper(data)
   }
 
+
   dataHelper(data) {
     return data.reduce((acc, dp) => {
       let { Data, Location, TimeFrame } = dp
-      let schoolData
-      
-      if( Number.isInteger(Data) ) {
-        schoolData = Data
-      } else {
-        schoolData = !isNaN(Data) ? parseFloat(Data.toFixed(3)) : 0;
-      }
 
-      if ( !acc[Location.toUpperCase()] ) {
-        acc[Location.toUpperCase()] = { location: Location.toUpperCase(), data: {} } 
-      }
+      let schoolData = !isNaN(Data) ? Math.round(Data * 1000)/1000 : 0
 
-      acc[Location.toUpperCase()].data = { ...acc[Location.toUpperCase()].data, [TimeFrame]: schoolData }
+      if (!acc[Location]) acc[Location.toUpperCase()] = { location: Location.toUpperCase(), data: {} }
+
+      acc[Location.toUpperCase()].data = { ...acc[Location.toUpperCase()].data, 
+        [TimeFrame]: schoolData }
+
 
       return acc;
     }, {})
@@ -60,7 +56,6 @@ export default class DistrictRepository {
     }, 0)
 
     return Math.round( (total / number) * 1000)/1000
-
   }
 
   compareDistrictAverages(name1, name2) {
@@ -70,6 +65,5 @@ export default class DistrictRepository {
     let compared = Math.round( (districtAverage1 / districtAverage2) * 1000)/1000
 
     return { [name1.toUpperCase()]: districtAverage1, [name2.toUpperCase()]: districtAverage2, compared }
-  }
-
+  }  
 }
