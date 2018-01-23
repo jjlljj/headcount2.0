@@ -1,25 +1,21 @@
 export default class DistrictRepository {
 
   constructor(data) {
-
     this.data = this.dataHelper(data)
-    // in the array will be key value pairs 
-    // the key is the school's name
-    // the value is an object of all the school's 
-    // data (which is a k/v pair of the year and data)
-    // data needs to have no duplicates, ie no school dups
   }
 
 
   dataHelper(data) {
     return data.reduce((acc, dp) => {
       let { Data, Location, TimeFrame } = dp
+
       let schoolData = !isNaN(Data) ? Math.round(Data * 1000)/1000 : 0
 
-      if (!acc[Location]) acc[Location] = { location: Location.toUpperCase(), data: {} }
+      if (!acc[Location.toUpperCase()]) acc[Location.toUpperCase()] = { location: Location.toUpperCase(), data: {} }
 
-      acc[Location].data = { ...acc[Location].data, 
+      acc[Location.toUpperCase()].data = { ...acc[Location.toUpperCase()].data, 
         [TimeFrame]: schoolData }
+
 
       return acc;
     }, {})
@@ -29,25 +25,45 @@ export default class DistrictRepository {
     if (!name) return undefined
 
     let dataKeys = Object.keys(this.data);
-
-    let foundSchool = dataKeys.find( school => {
-      return school.toUpperCase() === name.toUpperCase();
+    let foundSchool = dataKeys.find(school => {
+      return school === name.toUpperCase();
     })
 
     return this.data[foundSchool]
   }
 
   findAllMatches(name) {
+    let dataKeys = Object.keys(this.data);
+    
+    if (!name) {
+      return dataKeys.map(school => this.data[school.toUpperCase()])
+    }
 
-    let dataKeys = Object.keys(this.data)
-
-    return dataKeys.reduce((acc, school) => {
-      if (!name) {
-        acc.push(this.data[school])
-      } else if (school.toUpperCase().includes(name.toUpperCase())) {
-        acc.push(this.data[school])
-      }
-      return acc;
-    }, [])
+    return dataKeys.filter(school => {
+      return school.includes(name.toUpperCase());
+    }).map( school => this.data[school])
   }
+
+  findAverage(name) {
+    if (!name) return undefined
+    let schoolDataPoints = Object.values(this.data[name.toUpperCase()].data)
+
+    let number = schoolDataPoints.length
+    let total = schoolDataPoints.reduce((acc, num) => {
+      acc += num
+
+      return acc
+    }, 0)
+
+    return Math.round( (total / number) * 1000)/1000
+  }
+
+  compareDistrictAverages(name1, name2) {
+    let districtAverage1 = this.findAverage(name1)
+    let districtAverage2 = this.findAverage(name2)
+
+    let compared = Math.round( (districtAverage1 / districtAverage2) * 1000)/1000
+
+    return { [name1.toUpperCase()]: districtAverage1, [name2.toUpperCase()]: districtAverage2, compared }
+  }  
 }
