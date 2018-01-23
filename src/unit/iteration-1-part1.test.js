@@ -1,7 +1,7 @@
  /* eslint-disable */ 
 
-import DistrictRepository from '../../src/helper.js';
-import kinderData from '../../data/kindergartners_in_full_day_program.js';
+import DistrictRepository from '../components/helper/helper.js';
+import kinderData from '../data/kindergartners_in_full_day_program.js';
 
 describe('DistrictRepository iteration 1 - part 1', () =>  {
   const district = new DistrictRepository(kinderData);
