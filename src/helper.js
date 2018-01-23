@@ -3,7 +3,7 @@ export default class DistrictRepository {
   constructor(data) {
 
     this.data = this.dataHelper(data)
-    console.log(this.data)
+
     // in the array will be key value pairs 
     // the key is the school's name
     // the value is an object of all the school's 
@@ -14,38 +14,46 @@ export default class DistrictRepository {
   dataHelper(data) {
     return data.reduce((acc, dp) => {
       let { Data, Location, TimeFrame } = dp
-      const schoolData = !isNaN(Data) ?parseFloat(Data).toFixed(3) : 0
+      let schoolData
+      
+      if( Number.isInteger(Data) ) {
+        schoolData = Data
+      } else {
+        schoolData = !isNaN(Data) ? parseFloat(Data.toFixed(3)) : 0;
+      }
 
-      if (!acc[Location]) acc[Location] = {}
+      if ( !acc[Location.toUpperCase()] ) {
+        acc[Location.toUpperCase()] = { location: Location.toUpperCase(), data: {} } 
+      }
 
-      acc[Location] = { ...acc[Location], 
-        [TimeFrame]: schoolData }
+      acc [Location.toUpperCase()].data = { ...acc[Location.toUpperCase()].data, [TimeFrame]: schoolData }
 
       return acc;
-    }, {})
+    }, [])
+
   }
 
   findByName(name) {
-    //will take a name
-   // will return an object of key/value pairs of the years
-    // and the value of the 'data'
-    // use toFixed(3) to get the decimal
-    // if the data return N/A, it should default to zero
-    // needs to be case insensitive
+    if (!name) return undefined
+
+    let dataKeys = Object.keys(this.data);
+    let foundSchool = dataKeys.find(school => {
+      return school === name.toUpperCase();
+    })
+
+    return this.data[foundSchool]
   }
 
   findAllMatches(name) {
-    // needs to be case insensitive
-    // take a name
-    // if there are no match, should return an empty array
-    // if there is a match, return an array of matching objects of all data
-    // (key with corresponding values)
+    let dataKeys = Object.keys(this.data);
+    
+    if (!name) {
+      return dataKeys.map(school => this.data[school.toUpperCase()])
+    }
 
-    // try to reduce through the data
-    // return an array
-
-
-
+    return dataKeys.filter(school => {
+      return school.includes(name.toUpperCase());
+    }).map( school => this.data[school])
   }
 
 }
