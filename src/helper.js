@@ -3,7 +3,6 @@ export default class DistrictRepository {
   constructor(data) {
 
     this.data = this.dataHelper(data)
-    console.log(this.data)
     // in the array will be key value pairs 
     // the key is the school's name
     // the value is an object of all the school's 
@@ -11,14 +10,15 @@ export default class DistrictRepository {
     // data needs to have no duplicates, ie no school dups
   }
 
+
   dataHelper(data) {
     return data.reduce((acc, dp) => {
       let { Data, Location, TimeFrame } = dp
-      const schoolData = !isNaN(Data) ?parseFloat(Data).toFixed(3) : 0
+      let schoolData = !isNaN(Data) ? Math.round(Data * 1000)/1000 : 0
 
-      if (!acc[Location]) acc[Location] = {}
+      if (!acc[Location]) acc[Location] = { location: Location.toUpperCase(), data: {} }
 
-      acc[Location] = { ...acc[Location], 
+      acc[Location].data = { ...acc[Location].data, 
         [TimeFrame]: schoolData }
 
       return acc;
@@ -26,26 +26,28 @@ export default class DistrictRepository {
   }
 
   findByName(name) {
-    //will take a name
-   // will return an object of key/value pairs of the years
-    // and the value of the 'data'
-    // use toFixed(3) to get the decimal
-    // if the data return N/A, it should default to zero
-    // needs to be case insensitive
+    if (!name) return undefined
+
+    let dataKeys = Object.keys(this.data);
+
+    let foundSchool = dataKeys.find( school => {
+      return school.toUpperCase() === name.toUpperCase();
+    })
+
+    return this.data[foundSchool]
   }
 
   findAllMatches(name) {
-    // needs to be case insensitive
-    // take a name
-    // if there are no match, should return an empty array
-    // if there is a match, return an array of matching objects of all data
-    // (key with corresponding values)
 
-    // try to reduce through the data
-    // return an array
+    let dataKeys = Object.keys(this.data)
 
-
-
+    return dataKeys.reduce((acc, school) => {
+      if (!name) {
+        acc.push(this.data[school])
+      } else if (school.toUpperCase().includes(name.toUpperCase())) {
+        acc.push(this.data[school])
+      }
+      return acc;
+    }, [])
   }
-
 }
