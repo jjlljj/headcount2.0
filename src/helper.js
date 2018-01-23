@@ -1,14 +1,7 @@
 export default class DistrictRepository {
 
   constructor(data) {
-
     this.data = this.dataHelper(data)
-
-    // in the array will be key value pairs 
-    // the key is the school's name
-    // the value is an object of all the school's 
-    // data (which is a k/v pair of the year and data)
-    // data needs to have no duplicates, ie no school dups
   }
 
   dataHelper(data) {
@@ -30,7 +23,6 @@ export default class DistrictRepository {
 
       return acc;
     }, [])
-
   }
 
   findByName(name) {
