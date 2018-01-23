@@ -11,7 +11,7 @@ export default class DistrictRepository {
 
       let schoolData = !isNaN(Data) ? Math.round(Data * 1000)/1000 : 0
 
-      if (!acc[Location]) acc[Location.toUpperCase()] = { location: Location.toUpperCase(), data: {} }
+      if (!acc[Location.toUpperCase()]) acc[Location.toUpperCase()] = { location: Location.toUpperCase(), data: {} }
 
       acc[Location.toUpperCase()].data = { ...acc[Location.toUpperCase()].data, 
         [TimeFrame]: schoolData }
