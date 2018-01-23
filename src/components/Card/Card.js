@@ -3,7 +3,7 @@ import './Card.css';
 
 const Card = () => {
   return (
-    <div>I am card</div>
+    <div>I am a great card</div>
   );
 
 }

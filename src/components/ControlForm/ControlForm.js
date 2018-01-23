@@ -4,7 +4,10 @@ import './ControlForm.css';
 class ControlForm extends Component {
   render() {
     return (
-      <div>Welcome To Headcount 2.0</div>
+      <div>
+        <input />
+        <label />
+      </div>
     );
   }
 }

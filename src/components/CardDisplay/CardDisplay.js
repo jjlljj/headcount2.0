@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
+import Card from '../Card/Card'
 import './CardDisplay.css';
 
 const CardDisplay = () => {
   return (
-    <div>I am card display</div>
+    <div>
+      <Card />
+    </div>
   );
 
 }
