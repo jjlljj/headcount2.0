@@ -27,6 +27,10 @@
   font-weight: bold;
 }
 
+.highlight {
+  outline: 4px dashed blue;
+}
+
 .red {
   color: #D62C2C;
 }
