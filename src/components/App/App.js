@@ -5,26 +5,29 @@ import DistrictRepository from '../helper/helper'
 import './App.css';
 
 const dataFiles = {
-  'kinderData': require('../../data/kindergartners_in_full_day_program.js')
+  kinderData: require('../../data/kindergartners_in_full_day_program.js')
 }
 
 const districtData = new DistrictRepository(dataFiles.kinderData)
 
-console.log(districtData)
-
 class App extends Component {
 
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
 
     this.state = {
-      cards: [],
+      cards: {},
       compareCards: []
     }
   }
 
   componentDidMount() {
 
+    let cards = districtData
+    this.setState({ 
+      cards: districtData.data
+     })
+    console.log('state', this.state)
   }
 
   // handleSearch()
@@ -42,13 +45,11 @@ class App extends Component {
   // call helper function for compareDistrict
   // render compare data - returned from compare District
 
-
-
   render() {
     return (
       <div>
       <Header />
-      <CardDisplay />
+      <CardDisplay cards={this.state.cards}/>
       </div>
     );
   }
