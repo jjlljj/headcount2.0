@@ -1,6 +1,6 @@
 .card-display {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 30px;
+  margin-top: 20px;
   justify-content: center;
 }
