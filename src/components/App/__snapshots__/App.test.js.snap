@@ -1,95 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App should exist 1`] = `
-ShallowWrapper {
-  "length": 1,
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <App />,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "host",
-    "props": Object {
-      "children": Array [
-        <Header />,
-        <CardDisplay />,
-      ],
-    },
-    "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {},
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {},
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-    ],
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": Array [
-          <Header />,
-          <CardDisplay />,
-        ],
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {},
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {},
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-      ],
-      "type": "div",
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-      },
-    },
-  },
-}
-`;
-
 exports[`App should match snapshot 1`] = `
 ShallowWrapper {
   "length": 1,
@@ -109,6 +19,7 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Header
+          compareDistrict={undefined}
           handleSearch={[Function]}
 />,
         <CardDisplay
@@ -3012,6 +2923,7 @@ ShallowWrapper {
                               },
                             }
           }
+          compareCard={[Function]}
 />,
       ],
       "className": "app-container",
@@ -3023,6 +2935,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
+          "compareDistrict": undefined,
           "handleSearch": [Function],
         },
         "ref": null,
@@ -5932,6 +5845,7 @@ ShallowWrapper {
               "location": "YUMA SCHOOL DISTRICT 1",
             },
           },
+          "compareCard": [Function],
         },
         "ref": null,
         "rendered": null,
@@ -5948,6 +5862,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Header
+            compareDistrict={undefined}
             handleSearch={[Function]}
 />,
           <CardDisplay
@@ -8851,6 +8766,7 @@ ShallowWrapper {
                                     },
                                   }
             }
+            compareCard={[Function]}
 />,
         ],
         "className": "app-container",
@@ -8862,6 +8778,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
+            "compareDistrict": undefined,
             "handleSearch": [Function],
           },
           "ref": null,
@@ -11771,6 +11688,7 @@ ShallowWrapper {
                 "location": "YUMA SCHOOL DISTRICT 1",
               },
             },
+            "compareCard": [Function],
           },
           "ref": null,
           "rendered": null,
