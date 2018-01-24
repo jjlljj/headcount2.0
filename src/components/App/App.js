@@ -15,18 +15,17 @@ class App extends Component {
     super(props)
 
     this.state = {
+      dataSet: new DistrictRepository(dataFiles.kinderData),
       cards: {},
       compareCard1: '',
       compareCard2: '',
       comparison: {}
     }
-
-    this.dataSet = new DistrictRepository(dataFiles.kinderData)
   }
 
   componentDidMount() {
     this.setState({ 
-      cards: this.dataSet.data
+      cards: this.state.dataSet.data
     })
   }
 
@@ -35,7 +34,7 @@ class App extends Component {
   // }
 
   handleSearch = (location) =>  {
-    const matches = this.dataSet.findAllMatches(location)
+    const matches = this.state.dataSet.findAllMatches(location)
 
     const cards = matches.reduce((acc, match) => {
       acc[match.location] = match
@@ -64,7 +63,7 @@ class App extends Component {
     if (this.state.compareCard1) {
       let name1 = this.state.compareCard1
       let name2 = location
-      let comparison = this.dataSet.compareDistrictAverages(name1, name2)
+      let comparison = this.state.dataSet.compareDistrictAverages(name1, name2)
 
       this.setState({ comparison, compareCard2: location })
     }
@@ -74,12 +73,10 @@ class App extends Component {
     return (
       <div className="app-container">
         <Header handleSearch={this.handleSearch} />
-        <CompareDisplay 
-          card1={this.dataSet.data[this.state.compareCard1]}
-          comparison={this.state.comparison} 
-          card2={this.dataSet.data[this.state.compareCard2]}
-
-          />
+          <CompareDisplay 
+            card1={this.state.dataSet.data[this.state.compareCard1]}
+            comparison={this.state.comparison} 
+            card2={this.state.dataSet.data[this.state.compareCard2]}/>
         <CardDisplay cards={this.state.cards} compareCard={this.compareCard}/>
       </div>
     );
