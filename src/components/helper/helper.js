@@ -63,7 +63,7 @@ export default class DistrictRepository {
     let districtAverage2 = this.findAverage(name2)
 
     let compared = Math.round( (districtAverage1 / districtAverage2) * 1000)/1000
-
+    
     return { [name1.toUpperCase()]: districtAverage1, [name2.toUpperCase()]: districtAverage2, compared }
   }  
 }
