@@ -5,6 +5,8 @@ const Card = ({ card, clickHandler }) => {
   const { location, data } = card
   const dataKeys = Object.keys(data)
 
+  const classList =  ? "highlighted data-card" : "data-card" 
+
   const renderedData = dataKeys.map( dp => {
     const dataStyle = data[dp] <= 0.5 ? 'red' : 'blue' 
     return (
@@ -15,7 +17,8 @@ const Card = ({ card, clickHandler }) => {
   })
 
   return (
-    <div  className="data-card"
+
+    <div  className={"data-card"}
           onClick={() => clickHandler(location)}>
       <h5>{location}</h5>
       <ul>
