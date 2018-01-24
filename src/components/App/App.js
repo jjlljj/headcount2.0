@@ -17,7 +17,9 @@ class App extends Component {
 
     this.state = {
       cards: {},
-      compareCards: []
+      compareCard1: '',
+      compareCard2: '',
+      comparison: ''
     }
   }
 
@@ -36,6 +38,33 @@ class App extends Component {
     })
   }
 
+  compareCard = (location) => {
+    console.log('card clicked', location)
+
+    if (!this.state.compareCard1) {
+      this.setState({
+        compareCard1: location
+      })
+    }
+
+    if (this.state.compareCard1) {
+      this.setState({
+        compareCard2: location
+      })
+    }
+    this.compareDistricts()
+  }
+
+  compareDistricts() {
+    if (this.state.compareCard1 && this.state.compareCard2) {
+      let name1 = this.state.compareCard1
+      let name2 = this.state.compareCard2
+      let comparison = districtData.compareDistrictAverages(name1, name2)
+
+      this.setState({ comparison })
+    }
+  }
+
   // handleCardClick() - will get passed down
   // identify my two cards
   // pass name(location) up from cards
@@ -47,8 +76,8 @@ class App extends Component {
   render() {
     return (
       <div>
-      <Header handleSearch={this.handleSearch} />
-      <CardDisplay cards={this.state.cards}/>
+      <Header handleSearch={this.handleSearch} compareDistrict={this.compareDistrict}/>
+      <CardDisplay cards={this.state.cards} compareCard={this.compareCard}/>
       </div>
     );
   }

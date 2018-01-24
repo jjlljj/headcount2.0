@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Card.css';
 
-const Card = ({ card }) => {
+const Card = ({ card, compareCard }) => {
   const { location, data } = card
   const dataKeys = Object.keys(data)
 
@@ -17,6 +17,7 @@ const Card = ({ card }) => {
     <div>
       <h5>{location}</h5>
       { renderedData } 
+      <button onClick={() => compareCard(location)}>Compare Me</button>
     </div>
   )
 }
