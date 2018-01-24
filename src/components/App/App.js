@@ -22,20 +22,19 @@ class App extends Component {
   }
 
   componentDidMount() {
-
     let cards = districtData
+    
     this.setState({ 
       cards: districtData.data
      })
-    console.log('state', this.state)
   }
 
-  // handleSearch()
-  // search for a specific school
-  // on change, is a keypress not a submit button
-  // calls find all matches and then setState
-  // to render only those cards - cards should update live
-
+  handleSearch = (location) =>  {
+    const matches = districtData.findAllMatches(location)
+    this.setState({
+      cards: matches
+    })
+  }
 
   // handleCardClick() - will get passed down
   // identify my two cards
@@ -48,7 +47,7 @@ class App extends Component {
   render() {
     return (
       <div>
-      <Header />
+      <Header handleSearch={this.handleSearch} />
       <CardDisplay cards={this.state.cards}/>
       </div>
     );
