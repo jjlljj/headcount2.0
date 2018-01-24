@@ -6,22 +6,20 @@ const CompareCard = ({ card }) => {
   const { compared } = card
 
   return (
-    <div className="data-card">
+    <div className="data-card compare-card">
       <h2>Compared Districts</h2>
       <div>
         <h3>{cardKeys[0]}</h3>
         <p>{card[cardKeys[0]]}</p>
       </div>  
       <div>
-        <h2>Ratio</h2>
+        <h4>Ratio</h4>
         <p>{compared}</p>
       </div>
       <div>
         <h3>{cardKeys[1]}</h3>
         <p>{card[cardKeys[1]]}</p>
-      </div>
-
-    
+      </div>  
     </div>
   )
 }
