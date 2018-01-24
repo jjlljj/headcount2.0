@@ -19,7 +19,7 @@ class App extends Component {
       cards: {},
       compareCard1: '',
       compareCard2: '',
-      comparison: ''
+      comparison: null
     }
   }
 
