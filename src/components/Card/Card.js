@@ -7,7 +7,7 @@ const Card = ({ card }) => {
 
   const renderedData = dataKeys.map( dp => {
     return (
-      <li>
+      <li key={dp} >
         {dp} : {data[dp]}
       </li>
     )
