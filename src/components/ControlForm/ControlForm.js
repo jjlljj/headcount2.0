@@ -21,11 +21,12 @@ class ControlForm extends Component {
 
   render() {
     return (
-      <form>
+      <form className="control-form">
         <label htmlFor='searchDistrict'>Find your district</label>  
         <input 
           id='searchDistrict'
           type='text'
+          placeholder='Search school district'
           onChange={this.handleFormInput}
           value={this.state.location}
          />

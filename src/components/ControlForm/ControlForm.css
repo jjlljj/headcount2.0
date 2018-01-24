@@ -1,0 +1,16 @@
+.control-form {
+  align-self: center;
+  margin: 10px;
+}
+
+.control-form label {
+  display: none;
+  margin: 10px;
+}
+
+.control-form input {
+  font-size: 14px;
+  margin-right: 5px;
+  padding: 8px;
+  width: 200px;
+}

@@ -5,13 +5,12 @@ import './Header.css';
 const Header = ({ handleSearch, compareDistrict }) => {
   console.log(compareDistrict)
   return (
-    <div>
-      <h3>ALL OF THE DATA</h3>
+    <header className="site-header">
+      <h3>schoolData</h3>
       <ControlForm handleSearch={handleSearch} />
       <h5>{compareDistrict}</h5>
-    </div>
+    </header>
   );
-
 }
 
 export default Header;

@@ -64,9 +64,9 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-      <Header handleSearch={this.handleSearch} compareDistrict={this.compareDistrict}/>
-      <CardDisplay cards={this.state.cards} compareCard={this.compareCard}/>
+      <div className="app-container">
+        <Header handleSearch={this.handleSearch} compareDistrict={this.compareDistrict}/>
+        <CardDisplay cards={this.state.cards} compareCard={this.compareCard}/>
       </div>
     );
   }
