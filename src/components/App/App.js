@@ -48,29 +48,31 @@ class App extends Component {
 
   compareCard = (location) => {
 
-    if (!this.state.compareCard1) {
+    if (!this.state.compareCard1 && !this.state.compareCard2) {
       this.setState({
         compareCard1: location
       })
     }
 
-    if (this.state.compareCard1) {
-     this.compareDistricts(location)
+    if (this.state.compareCard2 && !this.state.compareCard1) {
+      this.compareDistricts(location, this.state.compareCard2)
+      this.setState({ compareCard1: location })
+    } else if (this.state.compareCard1) {
+      this.compareDistricts(this.state.compareCard1, location)
+      this.setState({ compareCard2: location})
     }
   }
 
-  removeCard = (blam) => {
-    this.setState({compareCard1:'', compareCard2:''})
-
+  compareDistricts(name1, name2) {
+    let comparison = this.state.dataSet.compareDistrictAverages(name1, name2)
+    this.setState({ comparison })
   }
 
-  compareDistricts(location) {
-    if (this.state.compareCard1) {
-      let name1 = this.state.compareCard1
-      let name2 = location
-      let comparison = this.state.dataSet.compareDistrictAverages(name1, name2)
-
-      this.setState({ comparison, compareCard2: location })
+  removeCard = (location) => {
+    if (location === this.state.compareCard1) {
+      this.setState({compareCard1:''})
+    } else {
+      this.setState({compareCard2:''})
     }
   }
 
