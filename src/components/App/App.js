@@ -5,32 +5,36 @@ import DistrictRepository from '../helper/helper'
 import './App.css';
 
 const dataFiles = {
-  'kinderData': require('../../data/kindergartners_in_full_day_program.js')
+  kinderData: require('../../data/kindergartners_in_full_day_program.js')
 }
 
 const districtData = new DistrictRepository(dataFiles.kinderData)
 
 class App extends Component {
 
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
 
     this.state = {
-      cards: [],
+      cards: {},
       compareCards: []
     }
   }
 
   componentDidMount() {
-
+    let cards = districtData
+    
+    this.setState({ 
+      cards: districtData.data
+     })
   }
 
-  // handleSearch()
-  // search for a specific school
-  // on change, is a keypress not a submit button
-  // calls find all matches and then setState
-  // to render only those cards - cards should update live
-
+  handleSearch = (location) =>  {
+    const matches = districtData.findAllMatches(location)
+    this.setState({
+      cards: matches
+    })
+  }
 
   // handleCardClick() - will get passed down
   // identify my two cards
@@ -40,13 +44,11 @@ class App extends Component {
   // call helper function for compareDistrict
   // render compare data - returned from compare District
 
-
-
   render() {
     return (
       <div>
-      <Header />
-      <CardDisplay />
+      <Header handleSearch={this.handleSearch} />
+      <CardDisplay cards={this.state.cards}/>
       </div>
     );
   }
