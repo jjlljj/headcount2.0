@@ -10,8 +10,6 @@ const dataFiles = {
 
 const districtData = new DistrictRepository(dataFiles.kinderData)
 
-console.log(districtData)
-
 class App extends Component {
 
   constructor() {
