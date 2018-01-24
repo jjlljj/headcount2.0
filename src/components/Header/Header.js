@@ -8,7 +8,6 @@ const Header = ({ handleSearch, compareDistrict }) => {
     <header className="site-header">
       <h3>schoolData</h3>
       <ControlForm handleSearch={handleSearch} />
-      <h5>{compareDistrict}</h5>
     </header>
   );
 }

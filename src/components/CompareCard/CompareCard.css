@@ -1,0 +1,21 @@
+.compare-card {
+  text-align: center;
+}
+
+.compare-card h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 20px 15px 5px;
+}
+
+.compare-card h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 15px 15px 10px;
+}
+
+.compare-card h4 {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 15px 15px 10px;
+}
