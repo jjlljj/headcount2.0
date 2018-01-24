@@ -19,6 +19,14 @@
   width: 70%;
 }
 
-.data-card ul {
+.data-card li {
+  font-weight: bold;
+}
 
+.red {
+  color: #D62C2C;
+}
+
+.blue {
+  color: #204298;
 }

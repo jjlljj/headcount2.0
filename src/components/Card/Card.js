@@ -6,9 +6,10 @@ const Card = ({ card }) => {
   const dataKeys = Object.keys(data)
 
   const renderedData = dataKeys.map( dp => {
+    const dataStyle = data[dp] <= 0.5 ? 'red' : 'blue' 
     return (
       <li key={dp} >
-        {dp} : {data[dp]}
+        {dp} : <span className={dataStyle}>{data[dp]}</span>
       </li>
     )
   })
