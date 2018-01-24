@@ -59,6 +59,11 @@ class App extends Component {
     }
   }
 
+  removeCard = (blam) => {
+    this.setState({compareCard1:'', compareCard2:''})
+
+  }
+
   compareDistricts(location) {
     if (this.state.compareCard1) {
       let name1 = this.state.compareCard1
@@ -76,7 +81,8 @@ class App extends Component {
           <CompareDisplay 
             card1={this.state.dataSet.data[this.state.compareCard1]}
             comparison={this.state.comparison} 
-            card2={this.state.dataSet.data[this.state.compareCard2]}/>
+            card2={this.state.dataSet.data[this.state.compareCard2]}
+            removeCard={this.removeCard}/>
         <CardDisplay cards={this.state.cards} compareCard={this.compareCard}/>
       </div>
     );
