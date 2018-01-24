@@ -4,10 +4,10 @@ import './Header.css';
 
 const Header = ({ handleSearch }) => {
   return (
-    <div>
-      <h3>ALL OF THE DATA</h3>
+    <header className="site-header">
+    <h3>schoolData</h3>
       <ControlForm handleSearch={handleSearch} />
-    </div>
+    </header>
   );
 
 }
