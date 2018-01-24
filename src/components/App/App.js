@@ -48,30 +48,19 @@ class App extends Component {
     }
 
     if (this.state.compareCard1) {
-      this.setState({
-        compareCard2: location
-      })
+     this.compareDistricts(location)
     }
-    this.compareDistricts()
   }
 
-  compareDistricts() {
-    if (this.state.compareCard1 && this.state.compareCard2) {
+  compareDistricts(location) {
+    if (this.state.compareCard1) {
       let name1 = this.state.compareCard1
-      let name2 = this.state.compareCard2
+      let name2 = location
       let comparison = districtData.compareDistrictAverages(name1, name2)
 
-      this.setState({ comparison })
+      this.setState({ comparison, compareCard2: location })
     }
   }
-
-  // handleCardClick() - will get passed down
-  // identify my two cards
-  // pass name(location) up from cards
-  // re render those cards to the top of the page - setState( )
-  // render a compare card
-  // call helper function for compareDistrict
-  // render compare data - returned from compare District
 
   render() {
     return (
