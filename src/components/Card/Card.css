@@ -1,0 +1,24 @@
+.data-card {
+  border: 1px solid black;
+  height: 300px;
+  margin: 10px;
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.data-card h5 {
+  border-bottom: 1px solid #d2d2d2;
+  font-family: Helvetica;
+  font-weight: bold;
+  font-size: 18px;
+  height: 42px;
+  margin: 35px 15px 15px;
+  text-align: center;
+  width: 70%;
+}
+
+.data-card ul {
+
+}

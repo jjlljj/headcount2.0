@@ -9,7 +9,7 @@ const CardDisplay = ({ cards }) => {
   const renderedCards = cardKeys.map( key => ( <Card key={cards[key].location} card={cards[key]} /> ))
 
   return (
-    <div> 
+    <div className="card-display"> 
       { renderedCards }
     </div>
   );

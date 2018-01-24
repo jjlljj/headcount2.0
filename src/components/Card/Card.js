@@ -14,9 +14,11 @@ const Card = ({ card }) => {
   })
 
   return (
-    <div>
+    <div className="data-card">
       <h5>{location}</h5>
+      <ul>
       { renderedData } 
+      </ul>
     </div>
   )
 }
