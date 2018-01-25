@@ -29,8 +29,8 @@ class App extends Component {
     })
   }
 
-  //loadNewDataSet() {
-  //   this.data = new DistrictRepository(dataSetName)
+  //loadNewDataSet(whatever) {
+  //   this.setState(data = new DistrictRepository(dataSetName)
   // }
 
   handleSearch = (location) =>  {
