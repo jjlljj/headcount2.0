@@ -1,11 +1,11 @@
 .data-card {
-  border: 1px solid black;
+  align-items: center;
+  box-shadow: 0 0 1px 1px #d2d2d2;
+  display: flex;
+  flex-direction: column;
   height: 300px;
   margin: 10px;
   width: 240px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .data-card:hover {
@@ -28,7 +28,7 @@
 }
 
 .highlight {
-  outline: 4px dashed blue;
+  box-shadow: 0 0 1px 1px red;
 }
 
 .red {

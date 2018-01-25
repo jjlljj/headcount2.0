@@ -10,7 +10,7 @@ const CompareCard = ({ card }) => {
       <h2>Compared Districts</h2>
       <div>
         <h3>{cardKeys[0]}</h3>
-        <p>{card[cardKeys[0]]}</p>
+        <p> &#8678; {card[cardKeys[0]]}</p>
       </div>  
       <div>
         <h4>Ratio</h4>
@@ -18,7 +18,7 @@ const CompareCard = ({ card }) => {
       </div>
       <div>
         <h3>{cardKeys[1]}</h3>
-        <p>{card[cardKeys[1]]}</p>
+        <p>{card[cardKeys[1]]} &#8680;</p>
       </div>  
     </div>
   )
