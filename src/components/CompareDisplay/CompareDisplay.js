@@ -18,9 +18,9 @@ const CompareDisplay = ({ card1, comparison, card2, removeCard }) => {
       }
       </div>  
       <div className="compare-container">
-      { card2 &&
-        <Card card={card2} clickHandler={removeCard}/>
-      }
+        { card2 &&
+          <Card card={card2} clickHandler={removeCard}/>
+        }
       </div>  
     </section>
   );
