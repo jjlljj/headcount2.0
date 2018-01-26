@@ -77,7 +77,7 @@ class App extends Component {
   }
 
   render() {
-    let selected = { this.state.compareCard1, this.state.compareCard2 }
+    let selected = { card1: this.state.compareCard1, card2: this.state.compareCard2 }
     return (
       <div className="app-container">
         <Header handleSearch={this.handleSearch} />
