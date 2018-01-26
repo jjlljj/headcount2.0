@@ -6,7 +6,10 @@ const CardDisplay = ({ cards, compareCard }) => {
 
   const cardKeys = Object.keys(cards)
 
-  const renderedCards = cardKeys.map( key => ( <Card key={cards[key].location} card={cards[key]} clickHandler={compareCard}/> ))
+  const renderedCards = cardKeys.map( key => return
+
+   ( <Card key={cards[key].location} card={cards[key]} clickHandler={compareCard}/> ))
+  }
 
   return (
     <div className="card-display"> 

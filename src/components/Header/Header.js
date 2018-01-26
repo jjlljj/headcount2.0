@@ -5,7 +5,7 @@ import './Header.css';
 const Header = ({ handleSearch, compareDistrict }) => {
   return (
     <header className="site-header">
-      <h3>schoolData</h3>
+      <h3>HeadCount2.0</h3>
       <ControlForm handleSearch={handleSearch} />
     </header>
   );
