@@ -14,7 +14,7 @@ describe('CompareCard', () => {
   })
 
   it.skip('should should match its snapshot', () => {
-  
+
     const renderedComponent = shallow(<CompareCard card={mockData}/>)
  
   })
