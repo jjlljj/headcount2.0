@@ -8,15 +8,17 @@ import CompareCard from './CompareCard';
 describe('CompareCard', () => {
 
   it('should exist', () => {
-    const renderedComponent = shallow(<CompareCard />)
+    const comparison = { "Denver, Co": 4321, "Boston, Ma": 1234, compared: .609 }
+    const renderedComponent = shallow(<CompareCard card={comparison}/>)
 
     expect(renderedComponent).toBeDefined()
   })
 
-  it.skip('should should match its snapshot', () => {
+  it('should should match its snapshot', () => {
+    const comparison = { "Denver, Co": 4321, "Boston, Ma": 1234, compared: .609 }
+    const renderedComponent = shallow(<CompareCard card={comparison}/>)
 
-    const renderedComponent = shallow(<CompareCard card={mockData}/>)
- 
+    expect(renderedComponent).toMatchSnapshot()
   })
 
   
