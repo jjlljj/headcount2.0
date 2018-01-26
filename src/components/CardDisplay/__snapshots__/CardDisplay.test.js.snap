@@ -1,0 +1,202 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardDisplay should match snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <CardDisplay
+    cards={
+        Object {
+            "Boston, Ma": Object {
+              "data": Object {
+                "2004": 0.023,
+                "2005": 3.112,
+                "2006": 7.11,
+              },
+              "location": "Boston, Ma",
+            },
+            "Denver, Co": Object {
+              "data": Object {
+                "200": 7.11,
+                "2004": 0.007,
+                "2005": 1.112,
+              },
+              "location": "Denver, Co",
+            },
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Card
+          card={
+                    Object {
+                              "data": Object {
+                                "200": 7.11,
+                                "2004": 0.007,
+                                "2005": 1.112,
+                              },
+                              "location": "Denver, Co",
+                            }
+          }
+          clickHandler={undefined}
+/>,
+        <Card
+          card={
+                    Object {
+                              "data": Object {
+                                "2004": 0.023,
+                                "2005": 3.112,
+                                "2006": 7.11,
+                              },
+                              "location": "Boston, Ma",
+                            }
+          }
+          clickHandler={undefined}
+/>,
+      ],
+      "className": "card-display",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": "Denver, Co",
+        "nodeType": "function",
+        "props": Object {
+          "card": Object {
+            "data": Object {
+              "200": 7.11,
+              "2004": 0.007,
+              "2005": 1.112,
+            },
+            "location": "Denver, Co",
+          },
+          "clickHandler": undefined,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "Boston, Ma",
+        "nodeType": "function",
+        "props": Object {
+          "card": Object {
+            "data": Object {
+              "2004": 0.023,
+              "2005": 3.112,
+              "2006": 7.11,
+            },
+            "location": "Boston, Ma",
+          },
+          "clickHandler": undefined,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Card
+            card={
+                        Object {
+                                    "data": Object {
+                                      "200": 7.11,
+                                      "2004": 0.007,
+                                      "2005": 1.112,
+                                    },
+                                    "location": "Denver, Co",
+                                  }
+            }
+            clickHandler={undefined}
+/>,
+          <Card
+            card={
+                        Object {
+                                    "data": Object {
+                                      "2004": 0.023,
+                                      "2005": 3.112,
+                                      "2006": 7.11,
+                                    },
+                                    "location": "Boston, Ma",
+                                  }
+            }
+            clickHandler={undefined}
+/>,
+        ],
+        "className": "card-display",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "Denver, Co",
+          "nodeType": "function",
+          "props": Object {
+            "card": Object {
+              "data": Object {
+                "200": 7.11,
+                "2004": 0.007,
+                "2005": 1.112,
+              },
+              "location": "Denver, Co",
+            },
+            "clickHandler": undefined,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "Boston, Ma",
+          "nodeType": "function",
+          "props": Object {
+            "card": Object {
+              "data": Object {
+                "2004": 0.023,
+                "2005": 3.112,
+                "2006": 7.11,
+              },
+              "location": "Boston, Ma",
+            },
+            "clickHandler": undefined,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
