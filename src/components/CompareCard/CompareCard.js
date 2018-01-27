@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import propTypes from 'prop-types'
+import propTypes, { string } from 'prop-types'
 import './CompareCard.css';
 
 const CompareCard = ({ card }) => {
@@ -26,7 +26,7 @@ const CompareCard = ({ card }) => {
 }
 
  CompareCard.propTypes = {
-  card: propTypes.oneOfType([propTypes.string, propTypes.object])
+  card: string
  }
 
 export default CompareCard;

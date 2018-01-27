@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 import { shallow } from 'enzyme'
 import App from './App';
 
-describe.skip('App', () => {
+describe('App', () => {
 
   let renderedComponent;
 

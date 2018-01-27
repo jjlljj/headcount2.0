@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import propTypes, { object, func, string } from 'prop-types'
+import propTypes, { object, func, string, shape } from 'prop-types'
 import Card from '../Card/Card'
 import './CardDisplay.css';
 
@@ -24,9 +24,13 @@ const CardDisplay = ({ cards, compareCard, selected }) => {
 }
 
 CardDisplay.propTypes = {
-  card: propTypes.oneOfType([propTypes.string, propTypes.object]),
+  card: shape({
+    data: propTypes.arrayOf(propTypes.object).isRequired,
+    location: string.isRequired
+  }),
   clickHandler: func,
   selected: func
 }
+
 
 export default CardDisplay;
