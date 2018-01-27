@@ -1,39 +1,40 @@
-import React, { Component } from 'react';
-import propTypes, { string, func } from 'prop-types'
+import React from 'react';
+import propTypes, { string, func } from 'prop-types';
 import './Card.css';
 
 const Card = ({ card, clickHandler, highlight }) => {
-  const { location, data } = card
-  const dataKeys = Object.keys(data)
+  const { location, data } = card;
+  const dataKeys = Object.keys(data);
 
-  const classList =  highlight ? "highlight data-card" : "data-card" 
+  const classList =  highlight ? "highlight data-card" : "data-card";
 
   const renderedData = dataKeys.map( dp => {
-    const dataStyle = data[dp] <= 0.5 ? 'red' : 'blue' 
+    const dataStyle = data[dp] <= 0.5 ? 'red' : 'blue'; 
     return (
       <li key={dp} >
         {dp} : <span className={dataStyle}>{data[dp]}</span>
       </li>
-    )
-  })
+    );
+  });
 
   return (
 
-    <div  className={ classList }
-          onClick={() => clickHandler(location)}>
+    <div  
+      className={ classList }
+      onClick={() => clickHandler(location)}>
       <h5>{location}</h5>
       <ul>
         { renderedData } 
       </ul>
     </div>
-  )
-}
+  );
+};
 
 Card.propTypes = {
   card: propTypes.oneOfType([propTypes.string, propTypes.object]),
   clickHandler: func,
   highlight: string
-}
+};
 
 export default Card;
 

@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import propTypes, { string } from 'prop-types'
+import React from 'react';
+import { oneOfType, string, object } from 'prop-types';
 import './CompareCard.css';
 
 const CompareCard = ({ card }) => {
-  const cardKeys = Object.keys(card)
-  const { compared } = card
+  const cardKeys = Object.keys(card);
+  const { compared } = card;
 
   return (
     <div className="data-card compare-card">
@@ -22,11 +22,11 @@ const CompareCard = ({ card }) => {
         <p>{card[cardKeys[1]]} &#8680;</p>
       </div>  
     </div>
-  )
-}
+  );
+};
 
- CompareCard.propTypes = {
-  card: string
- }
+CompareCard.propTypes = {
+  card: oneOfType( [object, string] )
+};
 
 export default CompareCard;

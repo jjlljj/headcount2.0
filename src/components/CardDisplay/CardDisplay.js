@@ -1,19 +1,25 @@
-import React, { Component } from 'react';
-import propTypes, { object, func, string, shape } from 'prop-types'
-import Card from '../Card/Card'
+import React from 'react';
+import propTypes, { object, func, string, shape } from 'prop-types';
+import Card from '../Card/Card';
 import './CardDisplay.css';
 
 const CardDisplay = ({ cards, compareCard, selected }) => {
 
-  const cardKeys = Object.keys(cards)
+  const cardKeys = Object.keys(cards);
   const renderedCards = cardKeys.map( key => { 
-    let highlight
+    let highlight;
     if (key === selected.card1 || key === selected.card2) {
-      highlight = true
+      highlight = true;
     }
 
-    return ( <Card key={cards[key].location} card={cards[key]} clickHandler={compareCard} highlight={highlight}/> )
-  })
+    return ( 
+      <Card 
+        key={cards[key].location} 
+        card={cards[key]} 
+        clickHandler={compareCard} 
+        highlight={highlight}/> 
+    );
+  });
 
   return (
     <div className="card-display"> 
@@ -21,16 +27,16 @@ const CardDisplay = ({ cards, compareCard, selected }) => {
     </div>
   );
 
-}
+};
 
 CardDisplay.propTypes = {
-  card: shape({
+  cards: shape({
     data: propTypes.arrayOf(propTypes.object).isRequired,
     location: string.isRequired
   }),
   clickHandler: func,
-  selected: func
-}
-
+  selected: object,
+  compareCard: func
+};
 
 export default CardDisplay;
