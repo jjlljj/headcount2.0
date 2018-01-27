@@ -19,8 +19,13 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Header
-          compareDistrict={undefined}
           handleSearch={[Function]}
+/>,
+        <CompareDisplay
+          card1={undefined}
+          card2={undefined}
+          comparison={Object {}}
+          removeCard={[Function]}
 />,
         <CardDisplay
           cards={
@@ -2924,6 +2929,12 @@ ShallowWrapper {
                             }
           }
           compareCard={[Function]}
+          selected={
+                    Object {
+                              "card1": "",
+                              "card2": "",
+                            }
+          }
 />,
       ],
       "className": "app-container",
@@ -2935,8 +2946,21 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "compareDistrict": undefined,
           "handleSearch": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "card1": undefined,
+          "card2": undefined,
+          "comparison": Object {},
+          "removeCard": [Function],
         },
         "ref": null,
         "rendered": null,
@@ -5846,6 +5870,10 @@ ShallowWrapper {
             },
           },
           "compareCard": [Function],
+          "selected": Object {
+            "card1": "",
+            "card2": "",
+          },
         },
         "ref": null,
         "rendered": null,
@@ -5862,8 +5890,13 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Header
-            compareDistrict={undefined}
             handleSearch={[Function]}
+/>,
+          <CompareDisplay
+            card1={undefined}
+            card2={undefined}
+            comparison={Object {}}
+            removeCard={[Function]}
 />,
           <CardDisplay
             cards={
@@ -8767,6 +8800,12 @@ ShallowWrapper {
                                   }
             }
             compareCard={[Function]}
+            selected={
+                        Object {
+                                    "card1": "",
+                                    "card2": "",
+                                  }
+            }
 />,
         ],
         "className": "app-container",
@@ -8778,8 +8817,21 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "compareDistrict": undefined,
             "handleSearch": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "card1": undefined,
+            "card2": undefined,
+            "comparison": Object {},
+            "removeCard": [Function],
           },
           "ref": null,
           "rendered": null,
@@ -11689,6 +11741,10 @@ ShallowWrapper {
               },
             },
             "compareCard": [Function],
+            "selected": Object {
+              "card1": "",
+              "card2": "",
+            },
           },
           "ref": null,
           "rendered": null,
