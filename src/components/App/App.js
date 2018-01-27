@@ -87,12 +87,15 @@ class App extends Component {
     return (
       <div className="app-container">
         <Header handleSearch={this.handleSearch} />
-          <CompareDisplay 
-            card1={this.state.dataSet.data[this.state.compareCard1]}
-            comparison={this.state.comparison} 
-            card2={this.state.dataSet.data[this.state.compareCard2]}
-            removeCard={this.removeCard}/>
-        <CardDisplay cards={this.state.cards} selected={selected} compareCard={this.compareCard}/>
+        <CompareDisplay 
+          card1={this.state.dataSet.data[this.state.compareCard1]}
+          comparison={this.state.comparison} 
+          card2={this.state.dataSet.data[this.state.compareCard2]}
+          removeCard={this.removeCard}/>
+        <CardDisplay 
+          cards={this.state.cards} 
+          selected={selected} 
+          compareCard={this.compareCard}/>
       </div>
     );
   }
