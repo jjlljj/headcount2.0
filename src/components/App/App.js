@@ -52,6 +52,12 @@ class App extends Component {
       this.setState({
         compareCard1: location
       })
+    } else if (this.state.compareCard1 === location) {
+      this.setState({ compareCard1: "" })
+      return
+    } else if (this.state.compareCard2 === location) {
+      this.setState({ compareCard2: "" })
+      return
     }
 
     if (this.state.compareCard2 && !this.state.compareCard1) {
