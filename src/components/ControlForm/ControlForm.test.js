@@ -34,15 +34,16 @@ let renderedComponent;
     // James - I had to mock/stub the preventDefault to remove an error
     controlForm.find('input').simulate('change', { target: { value: 'ASPEN 1'}, preventDefault: () => {} });
     expect(mockedSearch.mock.calls.length).toEqual(1);
+  
   })
 
   it('should update location upon setState', () => {
-    const mockedLocation = 'ASPEN 1'
+    const mockedSearch = jest.fn();
+    const controlForm = shallow(<ControlForm handleSearch={mockedSearch} />);
 
-    expect(renderedComponent.state().location).toEqual('');
-    renderedComponent.setState({ location: mockedLocation})
-    expect(renderedComponent.state().location).toEqual('ASPEN 1');
-
+    expect(controlForm.state().location).toEqual('');
+    controlForm.find('input').simulate('change', { target: { value: 'ASPEN 1'}, preventDefault: () => {} });
+    expect(controlForm.state().location).toEqual('ASPEN 1');
   })
 
 });
