@@ -1,22 +1,20 @@
-import React, { Component } from 'react';
-import propTypes, { string, func, shape } from 'prop-types'
+import React from 'react';
+import { oneOfType, string, func, object } from 'prop-types';
 import Card from '../Card/Card';
-import CompareCard from '../CompareCard/CompareCard'
+import CompareCard from '../CompareCard/CompareCard';
 import './CompareDisplay.css';
 
 const CompareDisplay = ({ card1, comparison, card2, removeCard }) => {
 
   return (
-    <section className="compare-display"> <div className="compare-container">
+    <section className="compare-display"> 
+      <div className="compare-container">
         { card1 &&
           <Card card={card1} clickHandler={removeCard} highlight="true"/>
         }
       </div>  
       <div className="compare-container">
-      {
-        
         <CompareCard card={comparison} />
-      }
       </div>  
       <div className="compare-container">
         { card2 &&
@@ -26,14 +24,14 @@ const CompareDisplay = ({ card1, comparison, card2, removeCard }) => {
     </section>
   );
 
-}
+};
 
 CompareDisplay.propTypes = {
-  card1: string,
-  comparison: string,
-  card2: string,
+  card1: oneOfType( [object, string] ),
+  comparison: oneOfType( [object, string] ),
+  card2: oneOfType( [object, string] ),
   removeCard: func
-}
+};
 
 
 

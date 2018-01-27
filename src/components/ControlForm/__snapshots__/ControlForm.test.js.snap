@@ -32,6 +32,7 @@ ShallowWrapper {
 />,
       ],
       "className": "control-form",
+      "onSubmit": [Function],
     },
     "ref": null,
     "rendered": Array [
@@ -86,6 +87,7 @@ ShallowWrapper {
 />,
         ],
         "className": "control-form",
+        "onSubmit": [Function],
       },
       "ref": null,
       "rendered": Array [
