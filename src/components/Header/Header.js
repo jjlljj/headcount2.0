@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import propTypes, { string, func } from 'prop-types'
 import ControlForm from '../ControlForm/ControlForm'
 import './Header.css';
 
@@ -9,6 +10,11 @@ const Header = ({ handleSearch, compareDistrict }) => {
       <ControlForm handleSearch={handleSearch} />
     </header>
   );
+}
+
+Header.propTypes = {
+  handleSearch: func.isRequired,
+  compareDistrict: string
 }
 
 export default Header;
