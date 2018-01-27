@@ -21,7 +21,7 @@ class ControlForm extends Component {
 
   render() {
     return (
-      <form className="control-form">
+      <form className="control-form" onSubmit={ (e)=> e.preventDefault()} >
         <label htmlFor='searchDistrict'>Find your district</label>  
         <input 
           id='searchDistrict'
