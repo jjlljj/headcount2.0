@@ -6,7 +6,7 @@ import { shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import ControlForm from './ControlForm';
 
-describe('ControlForm', () => {
+describe.only('ControlForm', () => {
 
 let renderedComponent;
 
@@ -22,24 +22,27 @@ let renderedComponent;
     expect(renderedComponent).toMatchSnapshot();
   })
 
-  // it('should have a default of an empty state', () => {
-  //   expect(renderedComponent.state().compareCard1).toEqual('');
-  //   expect(renderedComponent.state().compareCard2).toEqual('');
-  //   expect(renderedComponent.state().comparison).toEqual(null);
-  // })
+  it('should have a default of an empty state', () => {
+    expect(renderedComponent.state().location).toEqual('');
+  })
 
-  // it('when handleSearch is called with a location, the state should have that matching data', () => {
-    
+  it('should call handleSearch from props on change', () => {
+    const mockedSearch = jest.fn();
+    const controlForm = shallow(<ControlForm handleSearch={mockedSearch} />);
 
-  //   matches = 
-  //   { COLORADO: { 
-  //     data: { 2004: 0.24, 2005:0.278 },
-  //     location: "COLORADO"
-  //   }}
-  //   const mockedLocation = 'ASPEN 1'
+    expect(mockedSearch.mock.calls.length).toBe(0);
+    // James - I had to mock/stub the preventDefault to remove an error
+    controlForm.find('input').simulate('change', { target: { value: 'ASPEN 1'}, preventDefault: () => {} });
+    expect(mockedSearch.mock.calls.length).toEqual(1);
+  })
 
-  //   renderedComponent.instance().handleSearch(mockedLocation)
-  //   renderedComponent.setState({ cards: []})
-  //   expect(renderedComponent.state().cards).toEqual([matches])
-  // })
+  it('should update location upon setState', () => {
+    const mockedLocation = 'ASPEN 1'
+
+    expect(renderedComponent.state().location).toEqual('');
+    renderedComponent.setState({ location: mockedLocation})
+    expect(renderedComponent.state().location).toEqual('ASPEN 1');
+
+  })
+
 });
