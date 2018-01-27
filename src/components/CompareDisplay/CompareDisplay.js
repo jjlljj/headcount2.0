@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import propTypes, { string, func} from 'prop-types'
+import propTypes, { string, func, shape } from 'prop-types'
 import Card from '../Card/Card';
 import CompareCard from '../CompareCard/CompareCard'
 import './CompareDisplay.css';
@@ -34,5 +34,7 @@ CompareDisplay.propTypes = {
   card2: string,
   removeCard: func
 }
+
+
 
 export default CompareDisplay;

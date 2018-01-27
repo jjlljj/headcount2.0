@@ -14,7 +14,7 @@ const Header = ({ handleSearch, compareDistrict }) => {
 
 Header.propTypes = {
   handleSearch: func.isRequired,
-  compareDistrict: string.isRequired
+  compareDistrict: string
 }
 
 export default Header;
