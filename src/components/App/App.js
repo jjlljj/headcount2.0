@@ -16,7 +16,7 @@ class App extends Component {
 
     this.state = {
       dataSet: new DistrictRepository(dataFiles.kinderData),
-      cards: {},
+      cards: [],
       compareCard1: '',
       compareCard2: '',
       comparison: null

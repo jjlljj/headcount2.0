@@ -26,7 +26,7 @@ describe('Card', () => {
     const mockClickHandler = jest.fn()
     const renderedComponent = shallow(<Card card={mockData} clickHandler={mockClickHandler}/>)
 
-    renderedComponent.find('div').simulate('click')
+    renderedComponent.find('article').simulate('click')
 
     expect(mockClickHandler).toHaveBeenCalled();
   })

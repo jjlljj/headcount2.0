@@ -19,14 +19,14 @@ const Card = ({ card, clickHandler, highlight }) => {
 
   return (
 
-    <div  
+    <article  
       className={ classList }
       onClick={() => clickHandler(location)}>
       <h5>{location}</h5>
       <ul>
         { renderedData } 
       </ul>
-    </div>
+    </article>
   );
 };
 
