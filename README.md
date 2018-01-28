@@ -15,7 +15,7 @@ Our design:
 * Create modular, reusable React components.
 * Use propTypes to validate props passed to each component.
 * Write meaningful, comprehensive unit and integration tests.
-* To adhere and design with the 10 Essential Web Application Usability Guidelines in mind: [10-essential-web-application-usability-guidelines] https://speckyboy.com/10-essential-web-application-usability-guidelines/(https://speckyboy.com/10-essential-web-application-usability-guidelines/)
+* To adhere and design with the 10 Essential Web Application Usability Guidelines in mind: https://speckyboy.com/10-essential-web-application-usability-guidelines/(https://speckyboy.com/10-essential-web-application-usability-guidelines/)
 
 ## Set Up
 
