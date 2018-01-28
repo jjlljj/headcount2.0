@@ -25,6 +25,15 @@
 
 .data-card li {
   font-weight: bold;
+  position: relative;
+}
+
+.data-card i {
+  color: #204298;
+  font-size: 12px;
+  left: -18px;
+  position: absolute;
+  width: 12px;
 }
 
 .highlight {

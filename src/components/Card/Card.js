@@ -9,10 +9,12 @@ const Card = ({ card, clickHandler, highlight }) => {
   const classList =  highlight ? "highlight data-card" : "data-card";
 
   const renderedData = dataKeys.map( dp => {
-    const dataStyle = data[dp] <= 0.5 ? 'red' : 'blue'; 
+    const dataStyle = data[dp] <= 0.5 ? 'red' : ' blue'; 
+    const imgClass = data[dp] > 0.5 ? 'fa fa-check' : '';
     return (
       <li key={dp} >
-        {dp} : <span className={dataStyle}>{data[dp]}</span>
+        <i className={imgClass} aria-hidden="true"> </i>{dp} : <span className={dataStyle}>{data[dp]}</span>
+        
       </li>
     );
   });
@@ -22,7 +24,7 @@ const Card = ({ card, clickHandler, highlight }) => {
     <article  
       className={ classList }
       onClick={() => clickHandler(location)}>
-      <h5>{location}</h5>
+      <h5>{location}</h5> 
       <ul>
         { renderedData } 
       </ul>
