@@ -1,5 +1,5 @@
 import React from 'react';
-import propTypes, { object, func, shape } from 'prop-types';
+import { object, objectOf, func, shape } from 'prop-types';
 import Card from '../Card/Card';
 import './CardDisplay.css';
 
@@ -31,7 +31,7 @@ const CardDisplay = ({ cards, compareCard, selected }) => {
 
 CardDisplay.propTypes = {
   cards: shape({
-    data: propTypes.arrayOf(propTypes.object)
+    data: objectOf(object)
   }),
   clickHandler: func,
   selected: object,
