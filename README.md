@@ -18,6 +18,15 @@ In this project, we were given a static data file and asked to dynmically render
 * Write meaningful, comprehensive unit and integration tests.
 * To adhere and design with the 10 Essential Web Application Usability Guidelines in mind: https://speckyboy.com/10-essential-web-application-usability-guidelines/(https://speckyboy.com/10-essential-web-application-usability-guidelines/)
 
+## Usability changes:
+
+![image](https://user-images.githubusercontent.com/24358415/35486455-9006de62-042b-11e8-9528-8020a2d64f71.png)
+
+![image](https://user-images.githubusercontent.com/24358415/35486465-bb3ede04-042b-11e8-8b51-1114e57686ff.png)
+
+![image](https://user-images.githubusercontent.com/24358415/35486471-d07a0514-042b-11e8-8528-4955a4cceee9.png)
+
+
 ## Set Up
 
 Fork this project
