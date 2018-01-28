@@ -92,8 +92,6 @@ describe('App', () => {
 
     renderedComponent.update()
 
-    console.log(renderedComponent.find('Card'))
-
     expect(renderedComponent.find('CompareDisplay').find('section').length).toEqual(1);
     expect(renderedComponent.find('CompareDisplay').find('Card').at(0).find('h5').text()).toEqual('COLORADO');
     expect(renderedComponent.find('CompareDisplay').find('Card').at(1).find('h5').text()).toEqual('YUMA SCHOOL DISTRICT 1');
@@ -170,8 +168,6 @@ describe('App', () => {
       const renderedComponent = mount(<App />)
       renderedComponent.find('article').at(1).simulate('click')
       renderedComponent.find('article').at(3).simulate('click')
-
-      console.log(renderedComponent.state)
 
       expect(renderedComponent.state().comparison).toEqual({
         "ACADEMY 20": 0.407,
