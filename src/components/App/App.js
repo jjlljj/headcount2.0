@@ -27,11 +27,7 @@ class App extends Component {
     this.setState({ 
       cards: this.state.dataSet.data
     });
-  }
-
-  //loadNewDataSet = (whatever) => {
-  //   this.setState(data = new DistrictRepository(dataSetName)
-  // }
+  } 
 
   handleSearch = (location) =>  {
     const matches = this.state.dataSet.findAllMatches(location);

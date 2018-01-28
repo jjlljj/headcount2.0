@@ -28,18 +28,6 @@ describe('App', () => {
     expect(renderedComponent.state().comparison).toEqual(null);
   })
 
-  // (save this test for once we're pulling in all data sets)
-
-  // it('cards should have a default state of the new dataSet', () => {
-  //   const dataSet = { data: 'test data' };
-  //   const mockedMount = jest.fn()
-  //   const renderedComponent = shallow(<App componentDidMount={mockedMount}/>)
-
-  //   expect(renderedComponent.state().cards).toEqual({dataSet});
-
-  // })
-
-
   it('should take in a location and filter the card set that is rendered from state', () => {
     const renderedComponent = mount(<App />)
 
