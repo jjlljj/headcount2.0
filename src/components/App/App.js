@@ -53,10 +53,10 @@ class App extends Component {
         compareCard1: location
       });
     } else if (this.state.compareCard1 === location) {
-      this.setState({ compareCard1: "" , comparison: null});
+      this.setState({ compareCard1: "", comparison: null});
       return;
     } else if (this.state.compareCard2 === location) {
-      this.setState({ compareCard2: "" , comparison: null });
+      this.setState({ compareCard2: "", comparison: null });
       return;
     }
 

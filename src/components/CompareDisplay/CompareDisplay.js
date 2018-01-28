@@ -6,9 +6,10 @@ import './CompareDisplay.css';
 
 const CompareDisplay = ({ card1, comparison, card2, removeCard }) => {
 
-  let classList1 = card1  ? "compare-container show" : "compare-container"
-  let classList2 = card2 ? "compare-container show" : "compare-container"
-  let classListCompare = comparison ? "compare-container show" : "compare-container"
+  let classList1 = card1  ? "compare-container show" : "compare-container";
+  let classList2 = card2 ? "compare-container show" : "compare-container";
+  let classListCompare = comparison ? 
+    "compare-container show" : "compare-container";
 
   return (
     <section> 

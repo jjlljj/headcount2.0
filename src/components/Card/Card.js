@@ -33,7 +33,7 @@ const Card = ({ card, clickHandler, highlight }) => {
 Card.propTypes = {
   card: propTypes.oneOfType([propTypes.string, propTypes.object]),
   clickHandler: func,
-  highlight: bool,
+  highlight: bool
 };
 
 export default Card;
