@@ -20,26 +20,23 @@ In this project, we were given a static data file and asked to dynmically render
 
 ## Usability changes:
 
-### Added user instructions to guide our user and to make the 'call-to-action' and interactive objects obvious.
+Added user instructions to guide our user and to make the 'call-to-action' and interactive objects obvious.
 
 ![image](https://user-images.githubusercontent.com/24358415/35486455-9006de62-042b-11e8-9528-8020a2d64f71.png)
 
-### Walked the user through the state change (adding a card to be compared) piece by piece so as not to disorient them.
+Walked the user through the state change (adding a card to be compared) piece by piece so as not to disorient them.
 
 ![image](https://user-images.githubusercontent.com/24358415/35486465-bb3ede04-042b-11e8-8b51-1114e57686ff.png)
 
-### Added visual clues (arrows) to orient the user and give feedback about their interaction:
+Added visual clues (arrows) to orient the user and give feedback about their interaction:
 
 ![image](https://user-images.githubusercontent.com/24358415/35486471-d07a0514-042b-11e8-8528-4955a4cceee9.png)
 
-### Added a visual heirarchy, navigation, and default values to guide the user:
+Added a visual heirarchy, navigation, and default values to guide the user:
 
 ![image](https://user-images.githubusercontent.com/24358415/35486539-7a9eea78-042c-11e8-9aa4-49b990d41dee.png)
 
-### Additionally, we eliminated the red/green text color as a visual indicator.
-
-
-
+Additionally, we eliminated the red/green text color as a visual indicator.
 
 
 ## Set Up
