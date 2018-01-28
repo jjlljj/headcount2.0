@@ -39,24 +39,67 @@ describe('App', () => {
 
   // })
 
-  // the setState in component did mount
-  it('cards should have a default state of 181 districts and 181 cards', () => {
-
-    // expect(renderedComponent.find('.card').length).toEqual(181)
-    // expect(renderedComponent.state().cards.length).toEqual(181);
-
-  })
-
- 
-
-     // handleSearch
-  // location intake and setState
 
   it('should take in a location and filter the card set that is rendered from state', () => {
+    const renderedComponent = mount(<App />)
+
+    const searchResult = 
+      {'ASPEN 1':
+        {
+          location: 'ASPEN 1',
+          data: {
+            2004: 1,
+            2005: 1,
+            2006: 1,
+            2007: 1,
+            2008: 1,
+            2009: 1,
+            2010: 1,
+            2011: 1,
+            2012: 1,
+            2013: 1,
+            2014: 0.992
+          }
+        }
+      }
+   
+
+    renderedComponent.find('input').simulate('change', { target: { value: 'ASPEN 1' }, preventDefault: () => {} });
+    expect(renderedComponent.state().cards).toEqual(searchResult);
+    expect(renderedComponent.find('CardDisplay').length).toEqual(1)
 
   })
 
+  // it('should display 1 card in the CompareDisplay when a first card is selected', () => {
+  //   const mockedClick = jest.fn()
+  //   const renderedComponent = mount(<App compareCard={mockedClick}/>)
+
+  //   renderedComponent.find('article').first().simulate('click')
+
+  //   expect(renderedComponent.find('CompareDisplay').find('section').length).toEqual(1);
+  //   expect(renderedComponent.find('CompareDisplay').find('section').find('article').length).toEqual(3)
+  //   expect(renderedComponent.find('CompareDisplay').find('section').find('article').first().find('Card').find('h5').text()).toEqual('COLORADO');
+
+  // })
+
+  // it('should display 2 cards in the CompareDisplay when a second card is selected', () => {
+  //   const mockedClick = jest.fn()
+  //   const renderedComponent = mount(<App compareCard={mockedClick}/>)
+
+  //   renderedComponent.find('article').first().simulate('click')
+  //   // renderedComponent.find('article').last().simulate('click')
+
+  //   expect(renderedComponent.find('CompareDisplay').find('section').length).toEqual(1);
+  //   expect(renderedComponent.find('CompareDisplay').find('Card').at(1).find('h5').text()).toEqual('COLORADO');
+  //   expect(renderedComponent.find('CompareDisplay').find('Card').at(2).find('h5').text()).toEqual('YUMA SCHOOL DISTRICT 1');
+  // })
+
+  // it('should display 2 cards in the CompareDisplay when a third card is selected', () => {
+    
+  // })
+
   it('should set compare card1 when a card is selected', () => {
+
     const mockedClick = jest.fn()
     const renderedComponent = mount(<App compareCard={mockedClick}/>)
 
@@ -123,15 +166,19 @@ describe('App', () => {
   })
 
   it('should fire compareDistricts and set state when there are two cards', () => {
+      const renderedComponent = mount(<App />)
+      renderedComponent.find('article').at(1).simulate('click')
+      renderedComponent.find('article').at(3).simulate('click')
 
+      console.log(renderedComponent.state)
+
+      expect(renderedComponent.state().comparison).toEqual({
+        "ACADEMY 20": 0.407,
+        "ADAMS COUNTY 14": 0.709,
+        compared: 0.574
+      })
   })
-
-  it('should return a comparison ration and two average in the comparison card', () => {
-
-  })
-
   
- 
   it('should set the state of compareCard2 to empty to when the card is selected a second time', () => {
     const mockedClick = jest.fn()
     const renderedComponent = mount(<App compareCard={mockedClick}/>)
@@ -174,15 +221,5 @@ describe('App', () => {
 
   })
 })
-
-
-
-
-
-
-
-
-
-
 
 
