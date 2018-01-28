@@ -9,5 +9,18 @@
   display: flex;
   justify-content: center;
   min-width: 250px;
+  opacity: 0;
+  transition: 0.5s;
+  visibility: hidden; 
   width: 33.33%;
+}
+
+.compare-instructions {
+  margin: auto;
+  text-align: center;
+}
+
+.show {
+  opacity: 1;
+  visibility: visible; 
 }

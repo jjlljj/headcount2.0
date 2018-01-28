@@ -65,7 +65,7 @@ ShallowWrapper {
                             }
           }
           clickHandler={undefined}
-          highlight={undefined}
+          highlight={false}
 />,
         <Card
           card={
@@ -79,7 +79,7 @@ ShallowWrapper {
                             }
           }
           clickHandler={undefined}
-          highlight={undefined}
+          highlight={false}
 />,
         <Card
           card={
@@ -93,7 +93,7 @@ ShallowWrapper {
                             }
           }
           clickHandler={undefined}
-          highlight={undefined}
+          highlight={false}
 />,
       ],
       "className": "card-display",
@@ -114,7 +114,7 @@ ShallowWrapper {
             "location": "Denver, Co",
           },
           "clickHandler": undefined,
-          "highlight": undefined,
+          "highlight": false,
         },
         "ref": null,
         "rendered": null,
@@ -134,7 +134,7 @@ ShallowWrapper {
             "location": "Boston, Ma",
           },
           "clickHandler": undefined,
-          "highlight": undefined,
+          "highlight": false,
         },
         "ref": null,
         "rendered": null,
@@ -154,7 +154,7 @@ ShallowWrapper {
             "location": "Orlando, Fl",
           },
           "clickHandler": undefined,
-          "highlight": undefined,
+          "highlight": false,
         },
         "ref": null,
         "rendered": null,
@@ -182,7 +182,7 @@ ShallowWrapper {
                                   }
             }
             clickHandler={undefined}
-            highlight={undefined}
+            highlight={false}
 />,
           <Card
             card={
@@ -196,7 +196,7 @@ ShallowWrapper {
                                   }
             }
             clickHandler={undefined}
-            highlight={undefined}
+            highlight={false}
 />,
           <Card
             card={
@@ -210,7 +210,7 @@ ShallowWrapper {
                                   }
             }
             clickHandler={undefined}
-            highlight={undefined}
+            highlight={false}
 />,
         ],
         "className": "card-display",
@@ -231,7 +231,7 @@ ShallowWrapper {
               "location": "Denver, Co",
             },
             "clickHandler": undefined,
-            "highlight": undefined,
+            "highlight": false,
           },
           "ref": null,
           "rendered": null,
@@ -251,7 +251,7 @@ ShallowWrapper {
               "location": "Boston, Ma",
             },
             "clickHandler": undefined,
-            "highlight": undefined,
+            "highlight": false,
           },
           "ref": null,
           "rendered": null,
@@ -271,7 +271,7 @@ ShallowWrapper {
               "location": "Orlando, Fl",
             },
             "clickHandler": undefined,
-            "highlight": undefined,
+            "highlight": false,
           },
           "ref": null,
           "rendered": null,
@@ -348,7 +348,7 @@ ShallowWrapper {
                             }
           }
           clickHandler={undefined}
-          highlight={undefined}
+          highlight={false}
 />,
         <Card
           card={
@@ -362,7 +362,7 @@ ShallowWrapper {
                             }
           }
           clickHandler={undefined}
-          highlight={undefined}
+          highlight={false}
 />,
       ],
       "className": "card-display",
@@ -383,7 +383,7 @@ ShallowWrapper {
             "location": "Denver, Co",
           },
           "clickHandler": undefined,
-          "highlight": undefined,
+          "highlight": false,
         },
         "ref": null,
         "rendered": null,
@@ -403,7 +403,7 @@ ShallowWrapper {
             "location": "Boston, Ma",
           },
           "clickHandler": undefined,
-          "highlight": undefined,
+          "highlight": false,
         },
         "ref": null,
         "rendered": null,
@@ -431,7 +431,7 @@ ShallowWrapper {
                                   }
             }
             clickHandler={undefined}
-            highlight={undefined}
+            highlight={false}
 />,
           <Card
             card={
@@ -445,7 +445,7 @@ ShallowWrapper {
                                   }
             }
             clickHandler={undefined}
-            highlight={undefined}
+            highlight={false}
 />,
         ],
         "className": "card-display",
@@ -466,7 +466,7 @@ ShallowWrapper {
               "location": "Denver, Co",
             },
             "clickHandler": undefined,
-            "highlight": undefined,
+            "highlight": false,
           },
           "ref": null,
           "rendered": null,
@@ -486,7 +486,7 @@ ShallowWrapper {
               "location": "Boston, Ma",
             },
             "clickHandler": undefined,
-            "highlight": undefined,
+            "highlight": false,
           },
           "ref": null,
           "rendered": null,

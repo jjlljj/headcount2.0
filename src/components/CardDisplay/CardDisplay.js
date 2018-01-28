@@ -7,7 +7,7 @@ const CardDisplay = ({ cards, compareCard, selected }) => {
 
   const cardKeys = Object.keys(cards);
   const renderedCards = cardKeys.map( key => { 
-    let highlight;
+    let highlight = false;
     if (key === selected.card1 || key === selected.card2) {
       highlight = true;
     }

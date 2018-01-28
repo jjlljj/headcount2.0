@@ -19,7 +19,7 @@ class App extends Component {
       cards: {},
       compareCard1: '',
       compareCard2: '',
-      comparison: {}
+      comparison: null
     };
   }
 
@@ -53,10 +53,10 @@ class App extends Component {
         compareCard1: location
       });
     } else if (this.state.compareCard1 === location) {
-      this.setState({ compareCard1: "" });
+      this.setState({ compareCard1: "" , comparison: null});
       return;
     } else if (this.state.compareCard2 === location) {
-      this.setState({ compareCard2: "" });
+      this.setState({ compareCard2: "" , comparison: null });
       return;
     }
 
@@ -76,9 +76,9 @@ class App extends Component {
 
   removeCard = (location) => {
     if (location === this.state.compareCard1) {
-      this.setState({compareCard1:''});
+      this.setState({compareCard1:'', comparison: null});
     } else {
-      this.setState({compareCard2:''});
+      this.setState({compareCard2:'', comparison: null});
     }
   }
 

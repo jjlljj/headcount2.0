@@ -1,5 +1,5 @@
 import React from 'react';
-import propTypes, { string, func } from 'prop-types';
+import propTypes, { func, bool } from 'prop-types';
 import './Card.css';
 
 const Card = ({ card, clickHandler, highlight }) => {
@@ -33,7 +33,7 @@ const Card = ({ card, clickHandler, highlight }) => {
 Card.propTypes = {
   card: propTypes.oneOfType([propTypes.string, propTypes.object]),
   clickHandler: func,
-  highlight: string
+  highlight: bool,
 };
 
 export default Card;
