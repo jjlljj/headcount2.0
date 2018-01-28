@@ -6,21 +6,34 @@ import './CompareDisplay.css';
 
 const CompareDisplay = ({ card1, comparison, card2, removeCard }) => {
 
+  let classList1 = card1  ? "compare-container show" : "compare-container";
+  let classList2 = card2 ? "compare-container show" : "compare-container";
+  let classListCompare = comparison ? 
+    "compare-container show" : "compare-container";
+
   return (
-    <section className="compare-display"> 
-      <div className="compare-container">
-        { card1 &&
-          <Card card={card1} clickHandler={removeCard} highlight="true"/>
-        }
-      </div>  
-      <div className="compare-container">
-        <CompareCard card={comparison} />
-      </div>  
-      <div className="compare-container">
-        { card2 &&
-          <Card card={card2} clickHandler={removeCard} highlight="true"/>
-        }
-      </div>  
+    <section> 
+      <div className="compare-display">
+        <div className={classList1}>
+          { card1 &&
+            <Card card={card1} clickHandler={removeCard} highlight={true}/>
+          }
+        </div>  
+        <div className={classListCompare}>
+          { comparison &&
+            <CompareCard card={comparison} />
+          }
+        </div>
+
+        <div className={classList2}>
+          { card2 &&
+            <Card card={card2} clickHandler={removeCard} highlight={true}/>
+          }
+        </div>
+      </div>
+      <div className="compare-instructions">
+        <h5>Click cards to select for comparison</h5>
+      </div> 
     </section>
   );
 

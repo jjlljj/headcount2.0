@@ -24,7 +24,7 @@ ShallowWrapper {
         <CompareDisplay
           card1={undefined}
           card2={undefined}
-          comparison={Object {}}
+          comparison={null}
           removeCard={[Function]}
 />,
         <CardDisplay
@@ -2959,7 +2959,7 @@ ShallowWrapper {
         "props": Object {
           "card1": undefined,
           "card2": undefined,
-          "comparison": Object {},
+          "comparison": null,
           "removeCard": [Function],
         },
         "ref": null,
@@ -5895,7 +5895,7 @@ ShallowWrapper {
           <CompareDisplay
             card1={undefined}
             card2={undefined}
-            comparison={Object {}}
+            comparison={null}
             removeCard={[Function]}
 />,
           <CardDisplay
@@ -8830,7 +8830,7 @@ ShallowWrapper {
           "props": Object {
             "card1": undefined,
             "card2": undefined,
-            "comparison": Object {},
+            "comparison": null,
             "removeCard": [Function],
           },
           "ref": null,

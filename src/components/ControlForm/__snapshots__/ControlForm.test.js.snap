@@ -26,7 +26,7 @@ ShallowWrapper {
         <input
           id="searchDistrict"
           onChange={[Function]}
-          placeholder="Search school district"
+          placeholder="Search for a school district"
           type="text"
           value=""
 />,
@@ -55,7 +55,7 @@ ShallowWrapper {
         "props": Object {
           "id": "searchDistrict",
           "onChange": [Function],
-          "placeholder": "Search school district",
+          "placeholder": "Search for a school district",
           "type": "text",
           "value": "",
         },
@@ -81,7 +81,7 @@ ShallowWrapper {
           <input
             id="searchDistrict"
             onChange={[Function]}
-            placeholder="Search school district"
+            placeholder="Search for a school district"
             type="text"
             value=""
 />,
@@ -110,7 +110,7 @@ ShallowWrapper {
           "props": Object {
             "id": "searchDistrict",
             "onChange": [Function],
-            "placeholder": "Search school district",
+            "placeholder": "Search for a school district",
             "type": "text",
             "value": "",
           },

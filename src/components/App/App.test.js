@@ -24,7 +24,7 @@ describe('App', () => {
   it('should have a default of an empty state', () => {
     expect(renderedComponent.state().compareCard1).toEqual('');
     expect(renderedComponent.state().compareCard2).toEqual('');
-    expect(renderedComponent.state().comparison).toEqual({});
+    expect(renderedComponent.state().comparison).toEqual(null);
   })
 
   // it('when handleSearch is called with a location, the state should have that matching data', () => {

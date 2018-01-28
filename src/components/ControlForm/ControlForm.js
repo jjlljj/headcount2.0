@@ -29,7 +29,7 @@ class ControlForm extends Component {
         <input 
           id='searchDistrict'
           type='text'
-          placeholder='Search school district'
+          placeholder='Search for a school district'
           onChange={this.handleFormInput}
           value={this.state.location}
         />
