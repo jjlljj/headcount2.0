@@ -34,6 +34,10 @@ ShallowWrapper {
 </h5>,
         <ul>
           <li>
+                    <i
+                              aria-hidden="true"
+                              className="fa fa-check"
+                    />
                     200
                      : 
                     <span
@@ -41,12 +45,12 @@ ShallowWrapper {
                     >
                               7.11
                     </span>
-                    <i
-                              aria-hidden="true"
-                              className="fa fa-check"
-                    />
           </li>
           <li>
+                    <i
+                              aria-hidden="true"
+                              className=""
+                    />
                     2004
                      : 
                     <span
@@ -54,12 +58,12 @@ ShallowWrapper {
                     >
                               0.007
                     </span>
-                    <i
-                              aria-hidden="true"
-                              className=""
-                    />
           </li>
           <li>
+                    <i
+                              aria-hidden="true"
+                              className="fa fa-check"
+                    />
                     2005
                      : 
                     <span
@@ -67,10 +71,6 @@ ShallowWrapper {
                     >
                               1.112
                     </span>
-                    <i
-                              aria-hidden="true"
-                              className="fa fa-check"
-                    />
           </li>
 </ul>,
       ],
@@ -97,6 +97,10 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <li>
+              <i
+                            aria-hidden="true"
+                            className="fa fa-check"
+              />
               200
                : 
               <span
@@ -104,12 +108,12 @@ ShallowWrapper {
               >
                             7.11
               </span>
-              <i
-                            aria-hidden="true"
-                            className="fa fa-check"
-              />
 </li>,
             <li>
+              <i
+                            aria-hidden="true"
+                            className=""
+              />
               2004
                : 
               <span
@@ -117,12 +121,12 @@ ShallowWrapper {
               >
                             0.007
               </span>
-              <i
-                            aria-hidden="true"
-                            className=""
-              />
 </li>,
             <li>
+              <i
+                            aria-hidden="true"
+                            className="fa fa-check"
+              />
               2005
                : 
               <span
@@ -130,10 +134,6 @@ ShallowWrapper {
               >
                             1.112
               </span>
-              <i
-                            aria-hidden="true"
-                            className="fa fa-check"
-              />
 </li>,
           ],
         },
@@ -145,6 +145,10 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
+                <i
+                  aria-hidden="true"
+                  className="fa fa-check"
+/>,
                 "200",
                 " : ",
                 <span
@@ -152,14 +156,22 @@ ShallowWrapper {
 >
                   7.11
 </span>,
-                <i
-                  aria-hidden="true"
-                  className="fa fa-check"
-/>,
               ],
             },
             "ref": null,
             "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "aria-hidden": "true",
+                  "className": "fa fa-check",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "i",
+              },
               "200",
               " : ",
               Object {
@@ -174,18 +186,6 @@ ShallowWrapper {
                 "rendered": 7.11,
                 "type": "span",
               },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "aria-hidden": "true",
-                  "className": "fa fa-check",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": "i",
-              },
             ],
             "type": "li",
           },
@@ -195,6 +195,10 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
+                <i
+                  aria-hidden="true"
+                  className=""
+/>,
                 "2004",
                 " : ",
                 <span
@@ -202,14 +206,22 @@ ShallowWrapper {
 >
                   0.007
 </span>,
-                <i
-                  aria-hidden="true"
-                  className=""
-/>,
               ],
             },
             "ref": null,
             "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "aria-hidden": "true",
+                  "className": "",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "i",
+              },
               "2004",
               " : ",
               Object {
@@ -224,18 +236,6 @@ ShallowWrapper {
                 "rendered": 0.007,
                 "type": "span",
               },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "aria-hidden": "true",
-                  "className": "",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": "i",
-              },
             ],
             "type": "li",
           },
@@ -245,6 +245,10 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
+                <i
+                  aria-hidden="true"
+                  className="fa fa-check"
+/>,
                 "2005",
                 " : ",
                 <span
@@ -252,14 +256,22 @@ ShallowWrapper {
 >
                   1.112
 </span>,
-                <i
-                  aria-hidden="true"
-                  className="fa fa-check"
-/>,
               ],
             },
             "ref": null,
             "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "aria-hidden": "true",
+                  "className": "fa fa-check",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "i",
+              },
               "2005",
               " : ",
               Object {
@@ -273,18 +285,6 @@ ShallowWrapper {
                 "ref": null,
                 "rendered": 1.112,
                 "type": "span",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "aria-hidden": "true",
-                  "className": "fa fa-check",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": "i",
               },
             ],
             "type": "li",
@@ -307,6 +307,10 @@ ShallowWrapper {
 </h5>,
           <ul>
             <li>
+                        <i
+                                    aria-hidden="true"
+                                    className="fa fa-check"
+                        />
                         200
                          : 
                         <span
@@ -314,12 +318,12 @@ ShallowWrapper {
                         >
                                     7.11
                         </span>
-                        <i
-                                    aria-hidden="true"
-                                    className="fa fa-check"
-                        />
             </li>
             <li>
+                        <i
+                                    aria-hidden="true"
+                                    className=""
+                        />
                         2004
                          : 
                         <span
@@ -327,12 +331,12 @@ ShallowWrapper {
                         >
                                     0.007
                         </span>
-                        <i
-                                    aria-hidden="true"
-                                    className=""
-                        />
             </li>
             <li>
+                        <i
+                                    aria-hidden="true"
+                                    className="fa fa-check"
+                        />
                         2005
                          : 
                         <span
@@ -340,10 +344,6 @@ ShallowWrapper {
                         >
                                     1.112
                         </span>
-                        <i
-                                    aria-hidden="true"
-                                    className="fa fa-check"
-                        />
             </li>
 </ul>,
         ],
@@ -370,6 +370,10 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <li>
+                <i
+                                aria-hidden="true"
+                                className="fa fa-check"
+                />
                 200
                  : 
                 <span
@@ -377,12 +381,12 @@ ShallowWrapper {
                 >
                                 7.11
                 </span>
-                <i
-                                aria-hidden="true"
-                                className="fa fa-check"
-                />
 </li>,
               <li>
+                <i
+                                aria-hidden="true"
+                                className=""
+                />
                 2004
                  : 
                 <span
@@ -390,12 +394,12 @@ ShallowWrapper {
                 >
                                 0.007
                 </span>
-                <i
-                                aria-hidden="true"
-                                className=""
-                />
 </li>,
               <li>
+                <i
+                                aria-hidden="true"
+                                className="fa fa-check"
+                />
                 2005
                  : 
                 <span
@@ -403,10 +407,6 @@ ShallowWrapper {
                 >
                                 1.112
                 </span>
-                <i
-                                aria-hidden="true"
-                                className="fa fa-check"
-                />
 </li>,
             ],
           },
@@ -418,6 +418,10 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
+                  <i
+                    aria-hidden="true"
+                    className="fa fa-check"
+/>,
                   "200",
                   " : ",
                   <span
@@ -425,14 +429,22 @@ ShallowWrapper {
 >
                     7.11
 </span>,
-                  <i
-                    aria-hidden="true"
-                    className="fa fa-check"
-/>,
                 ],
               },
               "ref": null,
               "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "aria-hidden": "true",
+                    "className": "fa fa-check",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "i",
+                },
                 "200",
                 " : ",
                 Object {
@@ -447,18 +459,6 @@ ShallowWrapper {
                   "rendered": 7.11,
                   "type": "span",
                 },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "aria-hidden": "true",
-                    "className": "fa fa-check",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": "i",
-                },
               ],
               "type": "li",
             },
@@ -468,6 +468,10 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
+                  <i
+                    aria-hidden="true"
+                    className=""
+/>,
                   "2004",
                   " : ",
                   <span
@@ -475,14 +479,22 @@ ShallowWrapper {
 >
                     0.007
 </span>,
-                  <i
-                    aria-hidden="true"
-                    className=""
-/>,
                 ],
               },
               "ref": null,
               "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "aria-hidden": "true",
+                    "className": "",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "i",
+                },
                 "2004",
                 " : ",
                 Object {
@@ -497,18 +509,6 @@ ShallowWrapper {
                   "rendered": 0.007,
                   "type": "span",
                 },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "aria-hidden": "true",
-                    "className": "",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": "i",
-                },
               ],
               "type": "li",
             },
@@ -518,6 +518,10 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
+                  <i
+                    aria-hidden="true"
+                    className="fa fa-check"
+/>,
                   "2005",
                   " : ",
                   <span
@@ -525,14 +529,22 @@ ShallowWrapper {
 >
                     1.112
 </span>,
-                  <i
-                    aria-hidden="true"
-                    className="fa fa-check"
-/>,
                 ],
               },
               "ref": null,
               "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "aria-hidden": "true",
+                    "className": "fa fa-check",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "i",
+                },
                 "2005",
                 " : ",
                 Object {
@@ -546,18 +558,6 @@ ShallowWrapper {
                   "ref": null,
                   "rendered": 1.112,
                   "type": "span",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "aria-hidden": "true",
-                    "className": "fa fa-check",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": "i",
                 },
               ],
               "type": "li",

@@ -6,7 +6,7 @@ import './Header.css';
 const Header = ({ handleSearch }) => {
   return (
     <header className="site-header">
-      <h3>HeadCount2.0</h3>
+      <h3><i className="fa fa-users" aria-hidden="true"></i> HeadCount2.0</h3>
       <ControlForm handleSearch={handleSearch} />
     </header>
   );

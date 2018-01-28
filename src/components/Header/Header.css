@@ -12,3 +12,19 @@
   font-size: 30px;
   margin-left: 15px;
 }
+
+@media screen and (max-width: 500px) {
+  .site-header {
+    height: 130px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .site-header h3 {
+    margin: 10px 15px 0
+  }
+
+  .site-header input {
+    margin-right: 0;
+  }
+}

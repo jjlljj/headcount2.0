@@ -24,3 +24,13 @@
   opacity: 1;
   visibility: visible; 
 }
+
+@media screen and (max-width: 750px) {
+  .compare-display {
+    flex-wrap: wrap;
+
+  }
+  .compare-container {
+    width: 100%;
+  }
+}
