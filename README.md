@@ -36,7 +36,10 @@ Added a visual heirarchy, navigation, and default values to guide the user:
 
 ![image](https://user-images.githubusercontent.com/24358415/35486539-7a9eea78-042c-11e8-9aa4-49b990d41dee.png)
 
-Additionally, we eliminated the red/green text color as a visual indicator.
+Additionally, we eliminated the red/green text color as a visual indicator and added a checkmark to quickly indicate when the minimum data value had been met: 
+
+![image](https://user-images.githubusercontent.com/24358415/35487513-8af92340-0439-11e8-8f6c-43b3ce016127.png)
+
 
 
 ## Set Up
