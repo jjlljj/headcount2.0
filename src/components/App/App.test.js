@@ -70,33 +70,34 @@ describe('App', () => {
 
   })
 
-  // it('should display 1 card in the CompareDisplay when a first card is selected', () => {
-  //   const mockedClick = jest.fn()
-  //   const renderedComponent = mount(<App compareCard={mockedClick}/>)
+  it('should display 1 card in the CompareDisplay when a first card is selected', () => {
+    const mockedClick = jest.fn()
+    const renderedComponent = mount(<App compareCard={mockedClick}/>)
 
-  //   renderedComponent.find('article').first().simulate('click')
+    expect(renderedComponent.find('Card').first().find('h5').text()).toEqual('COLORADO');
 
-  //   expect(renderedComponent.find('CompareDisplay').find('section').length).toEqual(1);
-  //   expect(renderedComponent.find('CompareDisplay').find('section').find('article').length).toEqual(3)
-  //   expect(renderedComponent.find('CompareDisplay').find('section').find('article').first().find('Card').find('h5').text()).toEqual('COLORADO');
+    renderedComponent.find('article').last().simulate('click')
+    renderedComponent.update()
 
-  // })
+    expect(renderedComponent.find('Card').first().find('h5').text()).toEqual('YUMA SCHOOL DISTRICT 1');
 
-  // it('should display 2 cards in the CompareDisplay when a second card is selected', () => {
-  //   const mockedClick = jest.fn()
-  //   const renderedComponent = mount(<App compareCard={mockedClick}/>)
+  })
 
-  //   renderedComponent.find('article').first().simulate('click')
-  //   // renderedComponent.find('article').last().simulate('click')
+  it('should display 2 cards in the CompareDisplay when a second card is selected', () => {
+    const mockedClick = jest.fn()
+    const renderedComponent = mount(<App compareCard={mockedClick}/>)
 
-  //   expect(renderedComponent.find('CompareDisplay').find('section').length).toEqual(1);
-  //   expect(renderedComponent.find('CompareDisplay').find('Card').at(1).find('h5').text()).toEqual('COLORADO');
-  //   expect(renderedComponent.find('CompareDisplay').find('Card').at(2).find('h5').text()).toEqual('YUMA SCHOOL DISTRICT 1');
-  // })
+    renderedComponent.find('article').first().simulate('click')
+    renderedComponent.find('article').last().simulate('click')
 
-  // it('should display 2 cards in the CompareDisplay when a third card is selected', () => {
-    
-  // })
+    renderedComponent.update()
+
+    console.log(renderedComponent.find('Card'))
+
+    expect(renderedComponent.find('CompareDisplay').find('section').length).toEqual(1);
+    expect(renderedComponent.find('CompareDisplay').find('Card').at(0).find('h5').text()).toEqual('COLORADO');
+    expect(renderedComponent.find('CompareDisplay').find('Card').at(1).find('h5').text()).toEqual('YUMA SCHOOL DISTRICT 1');
+  })
 
   it('should set compare card1 when a card is selected', () => {
 
