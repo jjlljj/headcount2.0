@@ -13,8 +13,8 @@ const Card = ({ card, clickHandler, highlight }) => {
     const imgClass = data[dp] > 0.5 ? 'fa fa-check' : '';
     return (
       <li key={dp} >
-        {dp} : <span className={dataStyle}>{data[dp]}</span>
-        <i className={imgClass} aria-hidden="true"></i>
+        <i className={imgClass} aria-hidden="true"> </i>{dp} : <span className={dataStyle}>{data[dp]}</span>
+        
       </li>
     );
   });
