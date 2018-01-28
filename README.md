@@ -7,7 +7,8 @@ Original comp:
 
 Our design: 
 
-![Iteration 2 Comp Screen Shot](http://i.imgur.com/GzhO2EO.png)  
+![image](https://user-images.githubusercontent.com/24358415/35486337-0cf52520-042a-11e8-9bd3-a2975a7840ae.png)
+
 
 ## Our Project Goals
 
