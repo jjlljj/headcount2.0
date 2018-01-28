@@ -37,10 +37,14 @@ ShallowWrapper {
                     200
                      : 
                     <span
-                              className="blue"
+                              className=" blue"
                     >
                               7.11
                     </span>
+                    <i
+                              aria-hidden="true"
+                              className="fa fa-check"
+                    />
           </li>
           <li>
                     2004
@@ -50,15 +54,23 @@ ShallowWrapper {
                     >
                               0.007
                     </span>
+                    <i
+                              aria-hidden="true"
+                              className=""
+                    />
           </li>
           <li>
                     2005
                      : 
                     <span
-                              className="blue"
+                              className=" blue"
                     >
                               1.112
                     </span>
+                    <i
+                              aria-hidden="true"
+                              className="fa fa-check"
+                    />
           </li>
 </ul>,
       ],
@@ -88,10 +100,14 @@ ShallowWrapper {
               200
                : 
               <span
-                            className="blue"
+                            className=" blue"
               >
                             7.11
               </span>
+              <i
+                            aria-hidden="true"
+                            className="fa fa-check"
+              />
 </li>,
             <li>
               2004
@@ -101,15 +117,23 @@ ShallowWrapper {
               >
                             0.007
               </span>
+              <i
+                            aria-hidden="true"
+                            className=""
+              />
 </li>,
             <li>
               2005
                : 
               <span
-                            className="blue"
+                            className=" blue"
               >
                             1.112
               </span>
+              <i
+                            aria-hidden="true"
+                            className="fa fa-check"
+              />
 </li>,
           ],
         },
@@ -124,10 +148,14 @@ ShallowWrapper {
                 "200",
                 " : ",
                 <span
-                  className="blue"
+                  className=" blue"
 >
                   7.11
 </span>,
+                <i
+                  aria-hidden="true"
+                  className="fa fa-check"
+/>,
               ],
             },
             "ref": null,
@@ -140,11 +168,23 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": 7.11,
-                  "className": "blue",
+                  "className": " blue",
                 },
                 "ref": null,
                 "rendered": 7.11,
                 "type": "span",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "aria-hidden": "true",
+                  "className": "fa fa-check",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "i",
               },
             ],
             "type": "li",
@@ -162,6 +202,10 @@ ShallowWrapper {
 >
                   0.007
 </span>,
+                <i
+                  aria-hidden="true"
+                  className=""
+/>,
               ],
             },
             "ref": null,
@@ -180,6 +224,18 @@ ShallowWrapper {
                 "rendered": 0.007,
                 "type": "span",
               },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "aria-hidden": "true",
+                  "className": "",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "i",
+              },
             ],
             "type": "li",
           },
@@ -192,10 +248,14 @@ ShallowWrapper {
                 "2005",
                 " : ",
                 <span
-                  className="blue"
+                  className=" blue"
 >
                   1.112
 </span>,
+                <i
+                  aria-hidden="true"
+                  className="fa fa-check"
+/>,
               ],
             },
             "ref": null,
@@ -208,11 +268,23 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": 1.112,
-                  "className": "blue",
+                  "className": " blue",
                 },
                 "ref": null,
                 "rendered": 1.112,
                 "type": "span",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "aria-hidden": "true",
+                  "className": "fa fa-check",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "i",
               },
             ],
             "type": "li",
@@ -238,10 +310,14 @@ ShallowWrapper {
                         200
                          : 
                         <span
-                                    className="blue"
+                                    className=" blue"
                         >
                                     7.11
                         </span>
+                        <i
+                                    aria-hidden="true"
+                                    className="fa fa-check"
+                        />
             </li>
             <li>
                         2004
@@ -251,15 +327,23 @@ ShallowWrapper {
                         >
                                     0.007
                         </span>
+                        <i
+                                    aria-hidden="true"
+                                    className=""
+                        />
             </li>
             <li>
                         2005
                          : 
                         <span
-                                    className="blue"
+                                    className=" blue"
                         >
                                     1.112
                         </span>
+                        <i
+                                    aria-hidden="true"
+                                    className="fa fa-check"
+                        />
             </li>
 </ul>,
         ],
@@ -289,10 +373,14 @@ ShallowWrapper {
                 200
                  : 
                 <span
-                                className="blue"
+                                className=" blue"
                 >
                                 7.11
                 </span>
+                <i
+                                aria-hidden="true"
+                                className="fa fa-check"
+                />
 </li>,
               <li>
                 2004
@@ -302,15 +390,23 @@ ShallowWrapper {
                 >
                                 0.007
                 </span>
+                <i
+                                aria-hidden="true"
+                                className=""
+                />
 </li>,
               <li>
                 2005
                  : 
                 <span
-                                className="blue"
+                                className=" blue"
                 >
                                 1.112
                 </span>
+                <i
+                                aria-hidden="true"
+                                className="fa fa-check"
+                />
 </li>,
             ],
           },
@@ -325,10 +421,14 @@ ShallowWrapper {
                   "200",
                   " : ",
                   <span
-                    className="blue"
+                    className=" blue"
 >
                     7.11
 </span>,
+                  <i
+                    aria-hidden="true"
+                    className="fa fa-check"
+/>,
                 ],
               },
               "ref": null,
@@ -341,11 +441,23 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": 7.11,
-                    "className": "blue",
+                    "className": " blue",
                   },
                   "ref": null,
                   "rendered": 7.11,
                   "type": "span",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "aria-hidden": "true",
+                    "className": "fa fa-check",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "i",
                 },
               ],
               "type": "li",
@@ -363,6 +475,10 @@ ShallowWrapper {
 >
                     0.007
 </span>,
+                  <i
+                    aria-hidden="true"
+                    className=""
+/>,
                 ],
               },
               "ref": null,
@@ -381,6 +497,18 @@ ShallowWrapper {
                   "rendered": 0.007,
                   "type": "span",
                 },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "aria-hidden": "true",
+                    "className": "",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "i",
+                },
               ],
               "type": "li",
             },
@@ -393,10 +521,14 @@ ShallowWrapper {
                   "2005",
                   " : ",
                   <span
-                    className="blue"
+                    className=" blue"
 >
                     1.112
 </span>,
+                  <i
+                    aria-hidden="true"
+                    className="fa fa-check"
+/>,
                 ],
               },
               "ref": null,
@@ -409,11 +541,23 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": 1.112,
-                    "className": "blue",
+                    "className": " blue",
                   },
                   "ref": null,
                   "rendered": 1.112,
                   "type": "span",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "aria-hidden": "true",
+                    "className": "fa fa-check",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "i",
                 },
               ],
               "type": "li",
